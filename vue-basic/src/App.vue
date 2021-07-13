@@ -1,15 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <div>{{ count }}</div>
+
+  <button @click="count++">Add 1</button>
+  <button @click="addCount">Add Count</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  data() {
+    return {
+      count: 0,
+    };
+  },
+  methods: {
+    addCount() {
+      this.count += 2;
+    },
+  },
+};
 </script>
