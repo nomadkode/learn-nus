@@ -6,6 +6,8 @@
     <vfor />
     <child-component text="tesprops" />
     <child-component :text="pesan" />
+    <child-component v-for="todo in todos" v-bind:key="todo" :text="todo" />
+    <lifecycle />
   </div>
 </template>
 
@@ -15,12 +17,14 @@ import Vmodel from './components/Vmodel.vue';
 import Vif from './components/Vif.vue';
 import Vfor from './components/Vfor.vue';
 import ChildComponent from './components/ChildComponent.vue';
+import Lifecycle from './components/Lifecycle.vue';
 
 export default {
-  components: { Declarative, Vmodel, Vif, Vfor, ChildComponent },
+  components: { Declarative, Vmodel, Vif, Vfor, ChildComponent, Lifecycle },
   data() {
     return {
       pesan: 'halo dunia',
+      todos: ['pertama', 'kedua', 'ketiga'],
     };
   },
 };
