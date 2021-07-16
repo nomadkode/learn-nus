@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Ini adalah child components</h1>
+    <h3>Ini adalah child component</h3>
     <p>{{ text }}</p>
   </div>
 </template>

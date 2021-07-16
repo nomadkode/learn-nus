@@ -3,7 +3,8 @@
     <declarative />
     <vmodel />
     <vif />
-    <child-component text="tes123" />
+    <vfor />
+    <child-component text="tesprops" />
     <child-component :text="pesan" />
   </div>
 </template>
@@ -12,10 +13,11 @@
 import Declarative from './components/Declarative.vue';
 import Vmodel from './components/Vmodel.vue';
 import Vif from './components/Vif.vue';
+import Vfor from './components/Vfor.vue';
 import ChildComponent from './components/ChildComponent.vue';
 
 export default {
-  components: { Declarative, Vmodel, Vif, ChildComponent },
+  components: { Declarative, Vmodel, Vif, Vfor, ChildComponent },
   data() {
     return {
       pesan: 'halo dunia',
@@ -29,11 +31,19 @@ body {
   background-color: #0c0b36;
   color: #f1f1f1;
 }
+
 h1,
 h2,
 h3,
 p {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
