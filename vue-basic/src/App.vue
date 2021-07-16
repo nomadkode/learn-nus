@@ -1,19 +1,65 @@
 <template>
   <div>
-    <h4>ini parent components</h4>
-    <child-component text="test123" />
-    <child-component :text="message" />
+    <declarative />
+    <vmodel />
+    <vif />
+    <child-component text="tes123" />
+    <child-component :text="pesan" />
   </div>
 </template>
 
 <script>
+import Declarative from './components/Declarative.vue';
+import Vmodel from './components/Vmodel.vue';
+import Vif from './components/Vif.vue';
 import ChildComponent from './components/ChildComponent.vue';
+
 export default {
-  components: { ChildComponent },
+  components: { Declarative, Vmodel, Vif, ChildComponent },
   data() {
     return {
-      message: 'halo bro',
+      pesan: 'halo dunia',
     };
   },
 };
 </script>
+
+<style>
+body {
+  background-color: #0c0b36;
+  color: #f1f1f1;
+}
+h1,
+h2,
+h3,
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin: 0.5rem auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #010101;
+  color: #f1f1f1;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+input {
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
