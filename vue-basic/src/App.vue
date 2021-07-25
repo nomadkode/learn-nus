@@ -4,7 +4,7 @@
     <vmodel />
     <vif />
     <vfor />
-    <child-component text="tesprops" />
+    <child-component text="tes props" />
     <child-component :text="pesan" />
     <child-component v-for="todo in todos" v-bind:key="todo" :text="todo" />
     <lifecycle />
